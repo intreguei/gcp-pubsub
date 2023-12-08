@@ -1,6 +1,6 @@
 <?php
 
-namespace Lazari;
+namespace Lazari\Br;
 
 use Closure;
 use Exception;
