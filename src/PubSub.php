@@ -39,6 +39,7 @@ class PubSub
      */
     private static function listenForMessages(Subscription $subscription, Closure $callback) : void
     {
+        $retryAfter = $_ENV["GOOGLE_PUBSUB_RETRY_INTERVAL"] ?? 0;
         while (true) {
             foreach ($subscription->pull() as $message) {
                 try {
@@ -46,7 +47,7 @@ class PubSub
                     $subscription->acknowledge($message);
                 } catch (Exception $e) {
                     error_log($e->getMessage());
-                    $subscription->modifyAckDeadline($message, 0);
+                    $subscription->modifyAckDeadline($message, $retryAfter);
                 }
             }
         }
