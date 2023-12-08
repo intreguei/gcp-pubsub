@@ -1,5 +1,9 @@
 <?php
 
+namespace Lazari;
+
+use Closure;
+use Exception;
 use Google\Cloud\PubSub\PubSubClient;
 use Google\Cloud\PubSub\Subscription;
 
@@ -22,7 +26,7 @@ class PubSub
      * @param Closure $callback
      * @return void
      */
-    public static function subscribe(string $subscriptionName, Closure $callback) : void
+    public static function listenSubscription(string $subscriptionName, Closure $callback) : void
     {
         $subscription = (new PubSubClient())->subscription($subscriptionName);
         self::listenForMessages($subscription, $callback);
