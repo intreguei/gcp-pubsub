@@ -2,6 +2,7 @@
     "name": "lazari-br/gcp-pubsub",
     "description": "Pacote criado para publicação e subscrição de tópicos da gcp",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "LazariBr\\GcpPubsub\\": "src/"
