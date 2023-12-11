@@ -11,7 +11,7 @@ To begin, install the preferred dependency manager for PHP, [Composer](https://g
 Now to install just this library:
 
 ```sh
-$ composer require lazari-br/gcp-pubsub
+$ composer require intreguei/gcp-pubsub
 ```
 
 ### Authentication
@@ -26,7 +26,7 @@ on authenticating your client. Once authenticated, you'll be ready to start maki
 ```php
 require 'vendor/autoload.php';
 
-use LazariBr\GcpPubsub\PubSub;
+use Intreguei\GcpPubsub\PubSub;
 
 $callback = function () {
 
@@ -41,7 +41,7 @@ PubSub::listenSubscription('your_topic_name', $callback);
 ```php
 require 'vendor/autoload.php';
 
-use LazariBr\GcpPubsub\PubSub;
+use Intreguei\GcpPubsub\PubSub;
 
 $dataToPublish = [
     'key_1' => 'data_1',
@@ -60,4 +60,4 @@ PubSub::publishMessage('your_topic_name', $dataToPublish);
 
 ### Authors
 
-[Leandro Lazari](https://github.com/lazari-br/) & [Clezer Aragon](https://github.com/clezeraragon)
+[Clezer Aragon](https://github.com/clezeraragon) & [Leandro Lazari](https://github.com/lazari-br/)
