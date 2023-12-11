@@ -28,8 +28,8 @@ require 'vendor/autoload.php';
 
 use Intreguei\GcpPubsub\PubSub;
 
-$callback = function () {
-
+$callback = function ($message) {
+    //method to use message from topic
 } 
 
 PubSub::listenSubscription('your_topic_name', $callback);
