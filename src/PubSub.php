@@ -1,6 +1,6 @@
 <?php
 
-namespace LazariBr\GcpPubsub;
+namespace Intreguei\GcpPubsub;
 
 use Closure;
 use Exception;

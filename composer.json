@@ -1,16 +1,16 @@
 {
-    "name": "lazari-br/gcp-pubsub",
+    "name": "intreguei/gcp-pubsub",
     "description": "Pacote criado para publicação e subscrição de tópicos da gcp",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "LazariBr\\GcpPubsub\\": "src/"
+            "Intreguei\\GcpPubsub\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Leandro Lazari e Clezer Aragon"
+            "name": "Leandro Lazari <lazari.leandro@gmail.com> e Clezer Aragon <Kllezer@hotmail.com>"
         }
     ],
     "require": {
