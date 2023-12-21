@@ -17,7 +17,8 @@ class PubSub
     public static function publishMessage(string $topicName, mixed $message): string
     {
         $topic = (new PubSubClient())->topic($topicName);
-        $topic->publish(['data' => json_encode($message)]);
+        $messageToSend = is_string($message) ? $message : json_encode($message);
+        $topic->publish(['data' => $messageToSend]);
         return "Message published to topic: " . $topicName;
     }
 
